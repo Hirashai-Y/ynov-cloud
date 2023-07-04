@@ -1,9 +1,3 @@
-resource "aws_ssm_parameter" "bozo" {
-  name  = "bozo"
-  type  = "String"
-  value = "clown"
-}
-
 
 
 module "ec2_instance" {
@@ -11,7 +5,7 @@ module "ec2_instance" {
 
   name = "clement-instance"
   instance_type          = "t2.micro"
-  key_name               = "clement"
+
 
   tags = {
     Terraform   = "true"
